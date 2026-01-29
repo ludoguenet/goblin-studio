@@ -1,0 +1,20 @@
+{
+  "name": "goblin-studio",
+  "version": "1.0.0",
+  "description": "Goblin Studio - Agence de développement web",
+  "scripts": {
+    "dev": "concurrently \"npm run watch\" \"npm run serve\"",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "serve": "serve -l 3000"
+  },
+  "keywords": ["web development", "agency", "laravel", "vue", "nuxt"],
+  "author": "Ludovic Guénet",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "concurrently": "^9.1.2",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4.1.18"
+  }
+}

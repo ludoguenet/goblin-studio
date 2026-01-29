@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goblin Studio — Développement Web</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Goblin Studio est une agence de développement web spécialisée dans la création d'applications modernes avec Laravel, Vue et Nuxt.">
+    <meta name="keywords" content="Goblin Studio, développement web, Laravel, Vue, Nuxt, agence web, France">
+    <meta name="author" content="Ludovic Guénet">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Goblin Studio — Développement Web">
+    <meta property="og:description" content="Agence de développement web spécialisée dans Laravel, Vue et Nuxt.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Compiled Tailwind CSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-goblin-black text-white font-sans antialiased overflow-x-hidden">
+    <main class="max-w-[620px] mx-auto px-6 pr-[60px] relative z-10">
+        <!-- Section Accueil -->
+        <section id="accueil" class="active min-h-screen flex flex-col justify-center py-20" aria-labelledby="accueil-heading">
+            <div class="inline-flex items-center gap-4 mb-8">
+                <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">A</div>
+                <span class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Accueil</span>
+            </div>
+            <h1 id="accueil-heading" class="text-4xl md:text-[2.25rem] font-semibold leading-[1.3] mb-6 tracking-tight">
+                Bienvenue chez <span class="text-goblin-green">Goblin Studio</span>. Nous concevons des applications web robustes, pensées pour durer.
+            </h1>
+            <p class="text-lg text-goblin-gray font-normal">
+                Laravel, Vue, Nuxt — des fondations solides, une architecture claire, et du code qui vieillit bien.
+            </p>
+        </section>
+
+        <!-- Section Services -->
+        <section id="services" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="services-heading">
+            <div class="inline-flex items-center gap-4 mb-8">
+                <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">S</div>
+                <h2 id="services-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Services</h2>
+            </div>
+            <ul class="list-none space-y-6">
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Applications Laravel</span> — Systèmes sur mesure, APIs RESTful, authentification, gestion de fichiers et pipelines de données complexes.
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Interfaces Vue & Nuxt</span> — Applications réactives, SSR, gestion d'état et intégration Sanctum pour une expérience fluide.
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Architecture & Conseil</span> — Audit de code, refactoring, et mise en place de bonnes pratiques pour des projets maintenables.
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Packages Open Source</span> — Développement de solutions réutilisables et contribution à l'écosystème Laravel.
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Formation & Mentorat</span> — Accompagnement d'équipes et création de contenus pédagogiques via Laravel Jutsu.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section Projets -->
+        <section id="projets" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="projets-heading">
+            <div class="inline-flex items-center gap-4 mb-8">
+                <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">P</div>
+                <h2 id="projets-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Projets</h2>
+            </div>
+            <ul class="list-none space-y-6">
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Zap</span> — Gestion de calendriers et événements récurrents pour Laravel. Fuseaux horaires, DST et règles de récurrence complexes. <a href="https://laravel-zap.com" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laravel-zap.com</a>
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Nuxt Biscuit</span> — Authentification Sanctum pour Nuxt avec gestion de sessions, CSRF et refresh tokens. <a href="https://github.com/ludoguenet/nuxt-biscuit" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Laravel Artifact</span> — Gestion de médias avec flux d'upload explicites et pipelines de transformation. <a href="https://github.com/ludoguenet/laravel-artifact" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Laravel Jutsu</span> — Tutoriels Laravel en français, architecture et live coding. <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">YouTube</a>
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">LaraConnect</span> — Plateforme communautaire pour développeurs Laravel. <a href="https://laraconnect.fr" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laraconnect.fr</a>
+                </li>
+                <li class="text-white/85">
+                    <span class="text-white font-medium">Tailwind Ninja</span> — Thème VS Code minimaliste à haut contraste. <a href="https://marketplace.visualstudio.com/items?itemName=LudovicGuenet.tailwind-ninja-theme" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">VS Code Marketplace</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="contact-heading">
+            <div class="inline-flex items-center gap-4 mb-8">
+                <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">C</div>
+                <h2 id="contact-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Contact</h2>
+            </div>
+            <p class="text-white/85 mb-6">Discutons de votre projet</p>
+            <nav class="flex gap-8 mb-6 flex-wrap" aria-label="Liens de contact">
+                <a href="mailto:ludovicguenet@gmx.com" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">Email</a>
+                <a href="https://github.com/ludoguenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">GitHub</a>
+                <a href="https://www.linkedin.com/in/ludoguenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">LinkedIn</a>
+                <a href="https://x.com/LudovicGuenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">X</a>
+                <a href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">Bluesky</a>
+            </nav>
+            <p class="text-goblin-gray text-[0.9rem]">Basé en France. Disponible pour des missions freelance et collaborations.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-[60px] pb-20 border-t border-goblin-gray-dark">
+            <div class="flex justify-between items-center flex-wrap gap-6">
+                <span class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-goblin-gray">Goblin Studio</span>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Camera Control -->
+    <div class="camera-control-wrapper fixed right-6 top-1/2 -translate-y-1/2 z-[100]" id="wrapper" aria-hidden="true">
+        <div class="control-viewport relative h-[400px] w-[60px] overflow-hidden cursor-pointer" id="viewport">
+            <div class="dash-track absolute right-0 flex flex-col items-end gap-[5px]" id="track"></div>
+            <div class="center-indicator absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-end gap-2 pointer-events-none z-10">
+                <span class="center-label font-mono text-[0.65rem] text-goblin-green" id="centerLabel">A</span>
+                <div class="w-7 h-[2px] bg-goblin-green rounded-[1px]"></div>
+            </div>
+            <div class="absolute left-0 right-0 top-0 h-[100px] pointer-events-none z-[5] bg-gradient-to-b from-goblin-black to-transparent"></div>
+            <div class="absolute left-0 right-0 bottom-0 h-[100px] pointer-events-none z-[5] bg-gradient-to-t from-goblin-black to-transparent"></div>
+        </div>
+    </div>
+
+    <script>
+        const DASH_COUNT = 80;
+        const DASH_GAP = 5;
+        const ROW_HEIGHT = 2 + DASH_GAP;
+        const BASE_WIDTH = 12;
+        const SECTION_WIDTH = 16;
+        const VIEWPORT_HEIGHT = 400;
+        
+        const WAVE_WIDTHS = [1.65, 1.45, 1.3, 1.18, 1.1, 1.04];
+        
+        const pageSections = ['accueil', 'services', 'projets', 'contact'];
+        const sectionLetters = { accueil: 'A', services: 'S', projets: 'P', contact: 'C' };
+        
+        const sectionDashIndex = {};
+        const sectionScrollProgress = {};
+        pageSections.forEach((id, i) => {
+            const progress = i / (pageSections.length - 1);
+            sectionDashIndex[id] = Math.round(progress * (DASH_COUNT - 1));
+            sectionScrollProgress[id] = progress;
+        });
+        
+        const dashIndexToSection = {};
+        for (const [section, idx] of Object.entries(sectionDashIndex)) {
+            dashIndexToSection[idx] = section;
+        }
+        
+        let lastScrollY = 0;
+        let velocity = 0;
+        let isScrolling = false;
+        let scrollTimer = null;
+        let hideTimer = null;
+        let currentWidths = new Array(DASH_COUNT).fill(BASE_WIDTH);
+        let targetWidths = new Array(DASH_COUNT).fill(BASE_WIDTH);
+        let currentActiveSection = 'accueil';
+        let popTimeout = null;
+        
+        const track = document.getElementById('track');
+        const wrapper = document.getElementById('wrapper');
+        const centerLabel = document.getElementById('centerLabel');
+        const dashes = [];
+        const sectionLabels = {};
+        
+        for (let i = 0; i < DASH_COUNT; i++) {
+            const row = document.createElement('div');
+            row.className = 'dash-row flex items-center justify-end gap-2 h-[2px]';
+            
+            const sectionId = dashIndexToSection[i];
+            const isSection = sectionId !== undefined;
+            
+            if (isSection) {
+                const letter = document.createElement('span');
+                letter.className = 'section-letter font-mono text-[0.55rem] text-goblin-gray-mid tracking-[0.02em]';
+                letter.textContent = sectionLetters[sectionId];
+                letter.dataset.section = sectionId;
+                row.appendChild(letter);
+                sectionLabels[sectionId] = letter;
+            }
+            
+            const dash = document.createElement('div');
+            dash.className = 'dash h-[2px] rounded-[1px] bg-goblin-gray-mid';
+            const baseW = isSection ? SECTION_WIDTH : BASE_WIDTH;
+            dash.style.width = baseW + 'px';
+            if (isSection) {
+                dash.style.background = '#6E6E73';
+            }
+            row.appendChild(dash);
+            
+            track.appendChild(row);
+            dashes.push({ el: dash, isSection, baseWidth: baseW, sectionId });
+            currentWidths[i] = baseW;
+            targetWidths[i] = baseW;
+        }
+        
+        const halfViewport = VIEWPORT_HEIGHT / 2;
+        track.style.top = halfViewport + 'px';
+        
+        function getScrollProgress() {
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (docHeight <= 0) return 0;
+            return Math.max(0, Math.min(1, window.scrollY / docHeight));
+        }
+        
+        function getActiveSectionFromDial(progress) {
+            let active = pageSections[0];
+            for (let i = pageSections.length - 1; i >= 0; i--) {
+                const section = pageSections[i];
+                const sectionProgress = sectionScrollProgress[section];
+                if (progress >= sectionProgress - 0.001) {
+                    active = section;
+                    break;
+                }
+            }
+            return active;
+        }
+        
+        function triggerPop() {
+            centerLabel.classList.add('pop');
+            clearTimeout(popTimeout);
+            popTimeout = setTimeout(() => {
+                centerLabel.classList.remove('pop');
+            }, 200);
+        }
+        
+        function update() {
+            const progress = getScrollProgress();
+            const direction = velocity > 0 ? 1 : velocity < 0 ? -1 : 0;
+            const speed = Math.min(Math.abs(velocity) / 25, 1);
+            
+            const centerDashFloat = progress * (DASH_COUNT - 1);
+            const offset = centerDashFloat * ROW_HEIGHT;
+            track.style.transform = `translateY(${-offset}px)`;
+            
+            const newActiveSection = getActiveSectionFromDial(progress);
+            
+            if (newActiveSection !== currentActiveSection) {
+                currentActiveSection = newActiveSection;
+                centerLabel.textContent = sectionLetters[currentActiveSection];
+                triggerPop();
+            }
+            
+            for (const [sectionId, labelEl] of Object.entries(sectionLabels)) {
+                const sectionIdx = sectionDashIndex[sectionId];
+                const distFromCenter = Math.abs(sectionIdx - centerDashFloat);
+                
+                const fadeStart = 6;
+                const fadeEnd = 1;
+                
+                if (distFromCenter <= fadeStart) {
+                    const t = Math.max(0, (distFromCenter - fadeEnd) / (fadeStart - fadeEnd));
+                    labelEl.style.opacity = t * 0.6;
+                } else {
+                    labelEl.style.opacity = 0.6;
+                }
+            }
+            
+            for (let i = 0; i < DASH_COUNT; i++) {
+                const base = dashes[i].baseWidth;
+                const dist = i - centerDashFloat;
+                const absDist = Math.abs(dist);
+                
+                let target = base;
+                
+                if (isScrolling && speed > 0.05) {
+                    const inWaveDir = (direction > 0 && dist < 0) || (direction < 0 && dist > 0);
+                    
+                    if (inWaveDir && absDist >= 1 && absDist <= WAVE_WIDTHS.length) {
+                        const idx = Math.floor(absDist) - 1;
+                        const mult = WAVE_WIDTHS[idx];
+                        target = base * (1 + (mult - 1) * speed);
+                    } else if (!inWaveDir && absDist >= 1 && absDist <= 2) {
+                        const trailMult = absDist < 1.5 ? 1.1 : 1.04;
+                        target = base * (1 + (trailMult - 1) * speed * 0.5);
+                    }
+                }
+                
+                targetWidths[i] = target;
+            }
+            
+            for (let i = 0; i < DASH_COUNT; i++) {
+                const diff = targetWidths[i] - currentWidths[i];
+                if (Math.abs(diff) < 0.2) {
+                    currentWidths[i] = targetWidths[i];
+                } else {
+                    const lerp = isScrolling ? 0.3 : 0.08;
+                    currentWidths[i] += diff * lerp;
+                }
+                dashes[i].el.style.width = currentWidths[i] + 'px';
+            }
+            
+            // Update section visibility based on viewport position
+            const viewportCenter = window.scrollY + window.innerHeight / 2;
+            document.querySelectorAll('section').forEach(s => {
+                const rect = s.getBoundingClientRect();
+                const sectionTop = window.scrollY + rect.top;
+                const sectionBottom = sectionTop + rect.height;
+                const isInView = viewportCenter >= sectionTop && viewportCenter <= sectionBottom;
+                s.classList.toggle('active', isInView);
+            });
+            
+            requestAnimationFrame(update);
+        }
+        
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            velocity = y - lastScrollY;
+            lastScrollY = y;
+            isScrolling = true;
+            
+            wrapper.classList.add('visible');
+            
+            clearTimeout(hideTimer);
+            hideTimer = setTimeout(() => {
+                wrapper.classList.remove('visible');
+            }, 1200);
+            
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+                isScrolling = false;
+                velocity = 0;
+            }, 60);
+        }, { passive: true });
+        
+        const viewport = document.getElementById('viewport');
+        let dragging = false;
+        
+        function handlePointer(clientY) {
+            const rect = viewport.getBoundingClientRect();
+            const y = Math.max(0, Math.min(rect.height, clientY - rect.top));
+            const pct = y / rect.height;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: pct * docHeight, behavior: dragging ? 'auto' : 'smooth' });
+        }
+        
+        viewport.addEventListener('mousedown', e => { dragging = true; handlePointer(e.clientY); });
+        window.addEventListener('mouseup', () => dragging = false);
+        window.addEventListener('mousemove', e => { if (dragging) handlePointer(e.clientY); });
+        
+        viewport.addEventListener('touchstart', e => { dragging = true; handlePointer(e.touches[0].clientY); }, { passive: true });
+        window.addEventListener('touchend', () => dragging = false);
+        window.addEventListener('touchmove', e => { if (dragging) handlePointer(e.touches[0].clientY); }, { passive: true });
+        
+        for (let i = 0; i < DASH_COUNT; i++) {
+            if (dashes[i].isSection) {
+                currentWidths[i] = SECTION_WIDTH;
+            }
+        }
+        
+        update();
+    </script>
+</body>
+</html>
