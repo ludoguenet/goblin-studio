@@ -31,43 +31,145 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-goblin-black text-white font-sans antialiased overflow-x-hidden">
+    <script>
+    (function() {
+        var LANG_KEY = 'goblin-studio-lang';
+        var translations = {
+            fr: {
+                title: 'Goblin Studio — Développement Web',
+                metaDescription: 'Goblin Studio est une agence de développement web spécialisée dans la création d\'applications modernes avec Laravel, Vue et Nuxt.',
+                metaKeywords: 'Goblin Studio, développement web, Laravel, Vue, Nuxt, agence web, France',
+                ogTitle: 'Goblin Studio — Développement Web',
+                ogDescription: 'Agence de développement web spécialisée dans Laravel, Vue et Nuxt.',
+                accueilLabel: 'Accueil',
+                accueilHeading: 'Bienvenue chez <span class="text-goblin-green">Goblin Studio</span>. Nous concevons des applications web robustes, pensées pour durer.',
+                accueilIntro: 'Laravel, Vue, Nuxt — des fondations solides, une architecture claire, et du code qui vieillit bien.',
+                servicesLabel: 'Services',
+                service1: '<span class="text-white font-medium">Applications Laravel</span> — Systèmes sur mesure, APIs RESTful, authentification, gestion de fichiers et pipelines de données complexes.',
+                service2: '<span class="text-white font-medium">Interfaces Vue & Nuxt</span> — Applications réactives, SSR, gestion d\'état et intégration Sanctum pour une expérience fluide.',
+                service3: '<span class="text-white font-medium">Architecture & Conseil</span> — Audit de code, refactoring, et mise en place de bonnes pratiques pour des projets maintenables.',
+                service4: '<span class="text-white font-medium">Packages Open Source</span> — Développement de solutions réutilisables et contribution à l\'écosystème Laravel.',
+                service5: '<span class="text-white font-medium">Formation & Mentorat</span> — Accompagnement d\'équipes et création de contenus pédagogiques via Laravel Jutsu.',
+                projetsLabel: 'Projets',
+                projet1: '<span class="text-white font-medium">Zap</span> — Gestion de calendriers et événements récurrents pour Laravel. Fuseaux horaires, DST et règles de récurrence complexes. <a href="https://laravel-zap.com" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laravel-zap.com</a>',
+                projet2: '<span class="text-white font-medium">Nuxt Biscuit</span> — Authentification Sanctum pour Nuxt avec gestion de sessions, CSRF et refresh tokens. <a href="https://github.com/ludoguenet/nuxt-biscuit" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>',
+                projet3: '<span class="text-white font-medium">Laravel Artifact</span> — Gestion de médias avec flux d\'upload explicites et pipelines de transformation. <a href="https://github.com/ludoguenet/laravel-artifact" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>',
+                projet4: '<span class="text-white font-medium">Laravel Jutsu</span> — Tutoriels Laravel en français, architecture et live coding. <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">YouTube</a>',
+                projet5: '<span class="text-white font-medium">LaraConnect</span> — Plateforme communautaire pour développeurs Laravel. <a href="https://laraconnect.fr" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laraconnect.fr</a>',
+                projet6: '<span class="text-white font-medium">Tailwind Ninja</span> — Thème VS Code minimaliste à haut contraste. <a href="https://marketplace.visualstudio.com/items?itemName=LudovicGuenet.tailwind-ninja-theme" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">VS Code Marketplace</a>',
+                contactLabel: 'Contact',
+                contactTagline: 'Discutons de votre projet',
+                contactNavLabel: 'Liens de contact',
+                contactFooter: 'Basé en France. Disponible pour des missions freelance et collaborations.',
+                footerBrand: 'Goblin Studio'
+            },
+            en: {
+                title: 'Goblin Studio — Web Development',
+                metaDescription: 'Goblin Studio is a web development agency specializing in modern applications with Laravel, Vue and Nuxt.',
+                metaKeywords: 'Goblin Studio, web development, Laravel, Vue, Nuxt, web agency',
+                ogTitle: 'Goblin Studio — Web Development',
+                ogDescription: 'Web development agency specializing in Laravel, Vue and Nuxt.',
+                accueilLabel: 'Home',
+                accueilHeading: 'Welcome to <span class="text-goblin-green">Goblin Studio</span>. We build robust web applications, built to last.',
+                accueilIntro: 'Laravel, Vue, Nuxt — solid foundations, clear architecture, and code that ages well.',
+                servicesLabel: 'Services',
+                service1: '<span class="text-white font-medium">Laravel Applications</span> — Custom systems, RESTful APIs, authentication, file handling and complex data pipelines.',
+                service2: '<span class="text-white font-medium">Vue & Nuxt Interfaces</span> — Reactive apps, SSR, state management and Sanctum integration for a smooth experience.',
+                service3: '<span class="text-white font-medium">Architecture & Consulting</span> — Code audits, refactoring, and best practices for maintainable projects.',
+                service4: '<span class="text-white font-medium">Open Source Packages</span> — Reusable solutions and contributions to the Laravel ecosystem.',
+                service5: '<span class="text-white font-medium">Training & Mentoring</span> — Team coaching and educational content via Laravel Jutsu.',
+                projetsLabel: 'Projects',
+                projet1: '<span class="text-white font-medium">Zap</span> — Calendar and recurring events for Laravel. Timezones, DST and complex recurrence rules. <a href="https://laravel-zap.com" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laravel-zap.com</a>',
+                projet2: '<span class="text-white font-medium">Nuxt Biscuit</span> — Sanctum auth for Nuxt with session handling, CSRF and refresh tokens. <a href="https://github.com/ludoguenet/nuxt-biscuit" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>',
+                projet3: '<span class="text-white font-medium">Laravel Artifact</span> — Media management with explicit upload flows and transformation pipelines. <a href="https://github.com/ludoguenet/laravel-artifact" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>',
+                projet4: '<span class="text-white font-medium">Laravel Jutsu</span> — Laravel tutorials in French, architecture and live coding. <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">YouTube</a>',
+                projet5: '<span class="text-white font-medium">LaraConnect</span> — Community platform for Laravel developers. <a href="https://laraconnect.fr" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laraconnect.fr</a>',
+                projet6: '<span class="text-white font-medium">Tailwind Ninja</span> — Minimal high-contrast VS Code theme. <a href="https://marketplace.visualstudio.com/items?itemName=LudovicGuenet.tailwind-ninja-theme" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">VS Code Marketplace</a>',
+                contactLabel: 'Contact',
+                contactTagline: 'Let\'s talk about your project',
+                contactNavLabel: 'Contact links',
+                contactFooter: 'Based in France. Available for freelance and collaborations.',
+                footerBrand: 'Goblin Studio'
+            }
+        };
+        function getPreferredLang() {
+            try {
+                var stored = localStorage.getItem(LANG_KEY);
+                if (stored === 'fr' || stored === 'en') return stored;
+            } catch (e) {}
+            var nav = navigator.languages && navigator.languages[0] ? navigator.languages[0] : (navigator.language || '');
+            nav = (typeof nav === 'string' ? nav : '').toLowerCase();
+            return (nav.indexOf('en') === 0) ? 'en' : 'fr';
+        }
+        function applyLang(lang) {
+            var t = translations[lang] || translations.fr;
+            document.documentElement.lang = lang;
+            document.title = t.title;
+            var metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', t.metaDescription);
+            var metaKw = document.querySelector('meta[name="keywords"]');
+            if (metaKw) metaKw.setAttribute('content', t.metaKeywords);
+            var ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', t.ogTitle);
+            var ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', t.ogDescription);
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (t[key] != null) el.textContent = t[key];
+            });
+            document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-html');
+                if (t[key] != null) el.innerHTML = t[key];
+            });
+            document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-aria');
+                if (t[key] != null) el.setAttribute('aria-label', t[key]);
+            });
+            var switcherFr = document.getElementById('lang-fr');
+            var switcherEn = document.getElementById('lang-en');
+            if (switcherFr) { switcherFr.classList.toggle('opacity-50', lang !== 'fr'); switcherFr.setAttribute('aria-current', lang === 'fr' ? 'page' : 'false'); }
+            if (switcherEn) { switcherEn.classList.toggle('opacity-50', lang !== 'en'); switcherEn.setAttribute('aria-current', lang === 'en' ? 'page' : 'false'); }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var lang = getPreferredLang();
+            try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+            applyLang(lang);
+            var btnFr = document.getElementById('lang-fr');
+            var btnEn = document.getElementById('lang-en');
+            if (btnFr) btnFr.addEventListener('click', function() { try { localStorage.setItem(LANG_KEY, 'fr'); } catch (e) {} applyLang('fr'); });
+            if (btnEn) btnEn.addEventListener('click', function() { try { localStorage.setItem(LANG_KEY, 'en'); } catch (e) {} applyLang('en'); });
+        });
+        window.goblinI18n = { getPreferredLang: getPreferredLang, applyLang: applyLang };
+    })();
+    </script>
     <main class="max-w-[620px] mx-auto px-6 pr-[60px] relative z-10">
+        <nav class="fixed top-6 left-6 z-[100] flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-wider text-goblin-gray" aria-label="Language">
+            <button type="button" id="lang-fr" class="hover:text-white transition-colors duration-150" aria-current="true" aria-label="Français">FR</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" id="lang-en" class="hover:text-white transition-colors duration-150 opacity-50" aria-current="false" aria-label="English">EN</button>
+        </nav>
         <!-- Section Accueil -->
         <section id="accueil" class="active min-h-screen flex flex-col justify-center py-20" aria-labelledby="accueil-heading">
             <div class="inline-flex items-center gap-4 mb-8">
                 <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">A</div>
-                <span class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Accueil</span>
+                <span class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray" data-i18n="accueilLabel">Accueil</span>
             </div>
-            <h1 id="accueil-heading" class="text-4xl md:text-[2.25rem] font-semibold leading-[1.3] mb-6 tracking-tight">
-                Bienvenue chez <span class="text-goblin-green">Goblin Studio</span>. Nous concevons des applications web robustes, pensées pour durer.
-            </h1>
-            <p class="text-lg text-goblin-gray font-normal">
-                Laravel, Vue, Nuxt — des fondations solides, une architecture claire, et du code qui vieillit bien.
-            </p>
+            <h1 id="accueil-heading" class="text-4xl md:text-[2.25rem] font-semibold leading-[1.3] mb-6 tracking-tight" data-i18n-html="accueilHeading">Bienvenue chez <span class="text-goblin-green">Goblin Studio</span>. Nous concevons des applications web robustes, pensées pour durer.</h1>
+            <p class="text-lg text-goblin-gray font-normal" data-i18n="accueilIntro">Laravel, Vue, Nuxt — des fondations solides, une architecture claire, et du code qui vieillit bien.</p>
         </section>
 
         <!-- Section Services -->
         <section id="services" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="services-heading">
             <div class="inline-flex items-center gap-4 mb-8">
                 <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">S</div>
-                <h2 id="services-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Services</h2>
+                <h2 id="services-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray" data-i18n="servicesLabel">Services</h2>
             </div>
             <ul class="list-none space-y-6">
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Applications Laravel</span> — Systèmes sur mesure, APIs RESTful, authentification, gestion de fichiers et pipelines de données complexes.
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Interfaces Vue & Nuxt</span> — Applications réactives, SSR, gestion d'état et intégration Sanctum pour une expérience fluide.
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Architecture & Conseil</span> — Audit de code, refactoring, et mise en place de bonnes pratiques pour des projets maintenables.
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Packages Open Source</span> — Développement de solutions réutilisables et contribution à l'écosystème Laravel.
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Formation & Mentorat</span> — Accompagnement d'équipes et création de contenus pédagogiques via Laravel Jutsu.
-                </li>
+                <li class="text-white/85" data-i18n-html="service1"></li>
+                <li class="text-white/85" data-i18n-html="service2"></li>
+                <li class="text-white/85" data-i18n-html="service3"></li>
+                <li class="text-white/85" data-i18n-html="service4"></li>
+                <li class="text-white/85" data-i18n-html="service5"></li>
             </ul>
         </section>
 
@@ -75,27 +177,15 @@
         <section id="projets" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="projets-heading">
             <div class="inline-flex items-center gap-4 mb-8">
                 <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">P</div>
-                <h2 id="projets-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Projets</h2>
+                <h2 id="projets-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray" data-i18n="projetsLabel">Projets</h2>
             </div>
             <ul class="list-none space-y-6">
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Zap</span> — Gestion de calendriers et événements récurrents pour Laravel. Fuseaux horaires, DST et règles de récurrence complexes. <a href="https://laravel-zap.com" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laravel-zap.com</a>
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Nuxt Biscuit</span> — Authentification Sanctum pour Nuxt avec gestion de sessions, CSRF et refresh tokens. <a href="https://github.com/ludoguenet/nuxt-biscuit" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Laravel Artifact</span> — Gestion de médias avec flux d'upload explicites et pipelines de transformation. <a href="https://github.com/ludoguenet/laravel-artifact" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">GitHub</a>
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Laravel Jutsu</span> — Tutoriels Laravel en français, architecture et live coding. <a href="https://www.youtube.com/@LaravelJutsu" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">YouTube</a>
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">LaraConnect</span> — Plateforme communautaire pour développeurs Laravel. <a href="https://laraconnect.fr" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">laraconnect.fr</a>
-                </li>
-                <li class="text-white/85">
-                    <span class="text-white font-medium">Tailwind Ninja</span> — Thème VS Code minimaliste à haut contraste. <a href="https://marketplace.visualstudio.com/items?itemName=LudovicGuenet.tailwind-ninja-theme" target="_blank" class="text-goblin-green hover:opacity-70 transition-opacity duration-150">VS Code Marketplace</a>
-                </li>
+                <li class="text-white/85" data-i18n-html="projet1"></li>
+                <li class="text-white/85" data-i18n-html="projet2"></li>
+                <li class="text-white/85" data-i18n-html="projet3"></li>
+                <li class="text-white/85" data-i18n-html="projet4"></li>
+                <li class="text-white/85" data-i18n-html="projet5"></li>
+                <li class="text-white/85" data-i18n-html="projet6"></li>
             </ul>
         </section>
 
@@ -103,23 +193,23 @@
         <section id="contact" class="min-h-screen flex flex-col justify-center py-20" aria-labelledby="contact-heading">
             <div class="inline-flex items-center gap-4 mb-8">
                 <div class="marker-circle w-9 h-9 border-[1.5px] border-goblin-gray-mid rounded-full flex items-center justify-center font-mono text-sm text-goblin-gray pt-[0.2em]" aria-hidden="true">C</div>
-                <h2 id="contact-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray">Contact</h2>
+                <h2 id="contact-heading" class="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-goblin-gray" data-i18n="contactLabel">Contact</h2>
             </div>
-            <p class="text-white/85 mb-6">Discutons de votre projet</p>
-            <nav class="flex gap-8 mb-6 flex-wrap" aria-label="Liens de contact">
+            <p class="text-white/85 mb-6" data-i18n="contactTagline">Discutons de votre projet</p>
+            <nav class="flex gap-8 mb-6 flex-wrap" data-i18n-aria="contactNavLabel" aria-label="Liens de contact">
                 <a href="mailto:ludovicguenet@gmx.com" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">Email</a>
                 <a href="https://github.com/ludoguenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">GitHub</a>
                 <a href="https://www.linkedin.com/in/ludoguenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">LinkedIn</a>
                 <a href="https://x.com/LudovicGuenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">X</a>
                 <a href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">Bluesky</a>
             </nav>
-            <p class="text-goblin-gray text-[0.9rem]">Basé en France. Disponible pour des missions freelance et collaborations.</p>
+            <p class="text-goblin-gray text-[0.9rem]" data-i18n="contactFooter">Basé en France. Disponible pour des missions freelance et collaborations.</p>
         </section>
 
         <!-- Footer -->
         <footer class="py-[60px] pb-20 border-t border-goblin-gray-dark">
             <div class="flex justify-between items-center flex-wrap gap-6">
-                <span class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-goblin-gray">Goblin Studio</span>
+                <span class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-goblin-gray" data-i18n="footerBrand">Goblin Studio</span>
             </div>
         </footer>
     </main>
