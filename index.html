@@ -15,6 +15,18 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Goblin Studio — Développement Web">
     <meta property="og:description" content="Agence de développement web spécialisée dans Laravel, Vue et Nuxt.">
+    <meta property="og:image" content="https://goblin-studio.fr/social-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Goblin Studio — Agence de développement web Laravel, Vue et Nuxt.">
+    <meta property="og:url" content="https://goblin-studio.fr/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://goblin-studio.fr/social-card.png">
+    <meta name="twitter:title" content="Goblin Studio — Développement Web">
+    <meta name="twitter:description" content="Agence de développement web spécialisée dans Laravel, Vue et Nuxt.">
+    <meta name="twitter:site" content="@LudovicGuenet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -47,6 +59,7 @@
                 metaKeywords: 'Goblin Studio, développement web, Laravel, Vue, Nuxt, agence web, France',
                 ogTitle: 'Goblin Studio — Développement Web',
                 ogDescription: 'Agence de développement web spécialisée dans Laravel, Vue et Nuxt.',
+                ogImageAlt: 'Goblin Studio — Agence de développement web Laravel, Vue et Nuxt.',
                 accueilLabel: 'Accueil',
                 accueilHeading: 'Bienvenue chez <span class="text-goblin-green">Goblin Studio</span>. Nous concevons des applications web robustes, pensées pour durer.',
                 accueilIntro: 'Laravel, Vue, Nuxt — des fondations solides, une architecture claire, et du code qui vieillit bien.',
@@ -75,6 +88,7 @@
                 metaKeywords: 'Goblin Studio, web development, Laravel, Vue, Nuxt, web agency',
                 ogTitle: 'Goblin Studio — Web Development',
                 ogDescription: 'Web development agency specializing in Laravel, Vue and Nuxt.',
+                ogImageAlt: 'Goblin Studio — Web development agency, Laravel, Vue and Nuxt.',
                 accueilLabel: 'Home',
                 accueilHeading: 'Welcome to <span class="text-goblin-green">Goblin Studio</span>. We build robust web applications, built to last.',
                 accueilIntro: 'Laravel, Vue, Nuxt — solid foundations, clear architecture, and code that ages well.',
@@ -119,6 +133,21 @@
             if (ogTitle) ogTitle.setAttribute('content', t.ogTitle);
             var ogDesc = document.querySelector('meta[property="og:description"]');
             if (ogDesc) ogDesc.setAttribute('content', t.ogDescription);
+            var baseUrl = window.location.origin;
+            var imageUrl = baseUrl + '/social-card.png';
+            var pageUrl = baseUrl + window.location.pathname;
+            var ogImage = document.querySelector('meta[property="og:image"]');
+            if (ogImage) ogImage.setAttribute('content', imageUrl);
+            var ogImageAlt = document.querySelector('meta[property="og:image:alt"]');
+            if (ogImageAlt) ogImageAlt.setAttribute('content', t.ogImageAlt);
+            var ogUrl = document.querySelector('meta[property="og:url"]');
+            if (ogUrl) ogUrl.setAttribute('content', pageUrl);
+            var twImage = document.querySelector('meta[name="twitter:image"]');
+            if (twImage) twImage.setAttribute('content', imageUrl);
+            var twTitle = document.querySelector('meta[name="twitter:title"]');
+            if (twTitle) twTitle.setAttribute('content', t.ogTitle);
+            var twDesc = document.querySelector('meta[name="twitter:description"]');
+            if (twDesc) twDesc.setAttribute('content', t.ogDescription);
             document.querySelectorAll('[data-i18n]').forEach(function(el) {
                 var key = el.getAttribute('data-i18n');
                 if (t[key] != null) el.textContent = t[key];
