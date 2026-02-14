@@ -80,7 +80,7 @@
                 contactLabel: 'Contact',
                 contactTagline: 'Discutons de votre projet',
                 contactNavLabel: 'Liens de contact',
-                contactFooter: 'Basé en France. Disponible pour des missions freelance et collaborations. 06 42 49 86 53 | SIRET : 514715374 00021',
+                contactFooter: 'Basé en France. Disponible pour des missions freelance et collaborations.',
                 footerBrand: 'Goblin Studio'
             },
             en: {
@@ -109,7 +109,7 @@
                 contactLabel: 'Contact',
                 contactTagline: 'Let\'s talk about your project',
                 contactNavLabel: 'Contact links',
-                contactFooter: 'Based in France. Available for freelance and collaborations. 06 42 49 86 53 | SIRET: 514715374 00021',
+                contactFooter: 'Based in France. Available for freelance and collaborations.',
                 footerBrand: 'Goblin Studio'
             }
         };
@@ -240,7 +240,12 @@
                 <a href="https://x.com/LudovicGuenet" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">X</a>
                 <a href="https://bsky.app/profile/laraveljutsu.bsky.social" target="_blank" class="flex items-center gap-2 text-white font-medium hover:opacity-70 transition-opacity duration-150">Bluesky</a>
             </nav>
-            <p class="text-goblin-gray text-[0.9rem]" data-i18n="contactFooter">Basé en France. Disponible pour des missions freelance et collaborations. 06 42 49 86 53 | SIRET : 514715374 00021</p>
+            <p class="text-goblin-gray text-[0.9rem] mb-3" data-i18n="contactFooter">Basé en France. Disponible pour des missions freelance et collaborations.</p>
+            <address class="text-goblin-gray text-[0.9rem] not-italic flex flex-wrap items-baseline gap-x-2 gap-y-1 font-mono">
+                <a href="tel:+33642498653" class="text-goblin-gray hover:text-goblin-green transition-colors duration-150">06 42 49 86 53</a>
+                <span aria-hidden="true" class="text-goblin-gray-mid">·</span>
+                <span><abbr title="Système d'Identification du Répertoire des Établissements" class="no-underline">SIRET</abbr> 514715374 00021</span>
+            </address>
         </section>
 
         <!-- Footer -->
