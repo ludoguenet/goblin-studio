@@ -1,76 +1,70 @@
 @import "tailwindcss";
 
-/* Custom theme */
 @theme {
-    --color-goblin-green: #00FF7F;
-    --color-goblin-green-dark: #00CC66;
-    --color-goblin-black: #000000;
-    --color-goblin-gray: #86868B;
-    --color-goblin-gray-dark: #1D1D1F;
-    --color-goblin-gray-mid: #48484A;
-    
-    --font-sans: 'DM Sans', system-ui, sans-serif;
-    --font-mono: 'Space Mono', ui-monospace, monospace;
+    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
 }
 
-/* Custom styles */
 ::selection {
-    background: var(--color-goblin-green);
-    color: var(--color-goblin-black);
+    background-color: var(--color-emerald-600);
+    color: white;
 }
 
-/* Section active states */
-section {
-    opacity: 0.4;
-    transition: opacity 0.5s ease;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
-section.active {
-    opacity: 1;
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-emerald-600), var(--color-teal-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Marker circle active state */
-.marker-circle {
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-
-section.active .marker-circle {
-    border-color: var(--color-goblin-green) !important;
-    color: var(--color-goblin-green) !important;
-}
-
-/* Camera control */
-.camera-control-wrapper {
+/* Scroll-triggered reveal */
+.fade-up {
     opacity: 0;
-    transition: opacity 0.25s ease;
-    pointer-events: none;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.camera-control-wrapper.visible {
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+
+/* Sticky header glassmorphism on scroll */
+#site-header {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+#site-header.scrolled {
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile menu */
+#mobile-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+#mobile-menu.open {
     opacity: 1;
     pointer-events: auto;
-}
-
-.dash {
-    transition: width 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.center-label {
-    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.center-label.pop {
-    transform: scale(1.25);
-}
-
-/* Section letter fade */
-.section-letter {
-    transition: opacity 0.15s ease;
-}
-
-@media (max-width: 768px) {
-    .section-letter,
-    .center-label {
-        display: none;
-    }
+    transform: translateX(0);
 }
