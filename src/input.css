@@ -23,16 +23,22 @@ html {
 }
 
 /* Scroll-triggered reveal */
-.fade-up {
+html.js .fade-up {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
                 transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.fade-up.is-visible {
+html.js .fade-up.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Fallback when JS is disabled */
+html:not(.js) .fade-up {
+    opacity: 1;
+    transform: none;
 }
 
 .stagger-1 { transition-delay: 100ms; }
@@ -40,6 +46,20 @@ html {
 .stagger-3 { transition-delay: 300ms; }
 .stagger-4 { transition-delay: 400ms; }
 .stagger-5 { transition-delay: 500ms; }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    html.js .fade-up,
+    html.js .fade-up.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
 
 /* Sticky header glassmorphism on scroll */
 #site-header {
@@ -55,13 +75,10 @@ html {
 
 /* Mobile menu */
 #mobile-menu {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-#mobile-menu.hidden {
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #mobile-menu.open {
