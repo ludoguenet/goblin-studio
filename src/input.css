@@ -25,9 +25,9 @@ html {
 /* Scroll-triggered reveal */
 html.js .fade-up {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html.js .fade-up.is-visible {
@@ -35,8 +35,33 @@ html.js .fade-up.is-visible {
     transform: translateY(0);
 }
 
-/* Fallback when JS is disabled */
-html:not(.js) .fade-up {
+html.js .fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.js .fade-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+html.js .fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.js .fade-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+html:not(.js) .fade-up,
+html:not(.js) .fade-left,
+html:not(.js) .fade-right {
     opacity: 1;
     transform: none;
 }
@@ -47,29 +72,32 @@ html:not(.js) .fade-up {
 .stagger-4 { transition-delay: 400ms; }
 .stagger-5 { transition-delay: 500ms; }
 
-/* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
 
     html.js .fade-up,
-    html.js .fade-up.is-visible {
+    html.js .fade-up.is-visible,
+    html.js .fade-left,
+    html.js .fade-left.is-visible,
+    html.js .fade-right,
+    html.js .fade-right.is-visible {
         opacity: 1;
         transform: none;
         transition: none;
     }
 }
 
-/* Sticky header glassmorphism on scroll */
+/* Header */
 #site-header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 #site-header.scrolled {
     background-color: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
@@ -85,4 +113,128 @@ html:not(.js) .fade-up {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
+}
+
+/* Vertical text */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+/* Marquee */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+/* Service strip hover */
+.service-strip {
+    transition: background-color 0.35s ease, color 0.35s ease, padding-left 0.35s ease;
+}
+
+.service-strip:hover {
+    background-color: var(--color-emerald-600);
+    color: white;
+    padding-left: 3rem;
+}
+
+.service-strip:hover .service-num,
+.service-strip:hover .service-arrow {
+    color: white;
+}
+
+.service-strip:hover .service-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Project card overlay */
+.project-card .project-overlay {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-card .project-img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dot pattern */
+.dot-pattern {
+    background-image: radial-gradient(circle, rgba(5, 150, 105, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Line decoration */
+.line-accent::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-emerald-600);
+    top: 0;
+    left: 0;
+}
+
+/* Testimonial quote styling */
+.testimonial-card {
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: -0.25rem;
+    left: 1.5rem;
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--color-emerald-600);
+    opacity: 0.1;
+    font-family: Georgia, serif;
+    pointer-events: none;
+}
+
+/* Form input brutalist style (used in dark contact section) */
+.form-input-editorial {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-input-editorial:focus {
+    border-bottom-color: var(--color-emerald-500);
+}
+
+.form-input-editorial::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Process number hover */
+.process-step:hover .process-num {
+    color: var(--color-emerald-600);
+    transform: scale(1.05);
+}
+
+.process-num {
+    transition: color 0.3s ease, transform 0.3s ease;
 }
