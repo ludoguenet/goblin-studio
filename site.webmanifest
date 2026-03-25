@@ -1,6 +1,6 @@
 {
-  "name": "Goblin Code — Agence Web en Normandie",
-  "short_name": "Goblin Code",
+  "name": "Goblin Studio — Agence Web en Normandie",
+  "short_name": "Goblin Studio",
   "description": "Création de sites internet sur mesure pour artisans, commerçants et entreprises en Normandie.",
   "icons": [
     { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
