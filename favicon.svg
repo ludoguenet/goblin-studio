@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#34343a"/>
+            <stop offset="1" stop-color="#121214"/>
+        </linearGradient>
+        <linearGradient id="bevel" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+            <stop offset=".5" stop-color="#ffffff" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+    </defs>
+    <rect width="64" height="64" rx="15" fill="url(#tile)"/>
+    <rect x=".5" y=".5" width="63" height="63" rx="14.5" fill="none" stroke="url(#bevel)"/>
+    <path d="M44 36H28a8 8 0 0 1-8-8v-6a8 8 0 0 1 8-8h16v28a8 8 0 0 1-8 8H23" fill="none" stroke="#00ff85" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+</svg>
