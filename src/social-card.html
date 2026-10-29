@@ -16,16 +16,32 @@
             height: 630px;
             overflow: hidden;
             position: relative;
-            background-color: #f5f1e8;
-            background-image: radial-gradient(rgba(17, 17, 17, 0.07) 1px, transparent 1px);
+            background-color: #0c0c0d;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
             background-size: 14px 14px;
             font-family: 'Inter', sans-serif;
-            color: #111;
+            color: #fff;
         }
 
-        .slabs {
+        /* Soft green halo behind the logo */
+        body::before {
+            content: '';
             position: absolute;
-            inset: 0;
+            right: -60px;
+            top: 50%;
+            width: 640px;
+            height: 640px;
+            transform: translateY(-50%);
+            background: radial-gradient(circle, rgba(158, 241, 110, 0.16) 0%, rgba(158, 241, 110, 0.04) 40%, transparent 68%);
+        }
+
+        .logo {
+            position: absolute;
+            right: 90px;
+            top: 50%;
+            width: 380px;
+            transform: translateY(-50%);
+            filter: drop-shadow(0 0 28px rgba(158, 241, 110, 0.22));
         }
 
         .content {
@@ -33,7 +49,7 @@
             left: 80px;
             top: 0;
             bottom: 0;
-            width: 640px;
+            width: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -47,6 +63,7 @@
             font-weight: 600;
             letter-spacing: 0.28em;
             text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 36px;
         }
 
@@ -54,22 +71,22 @@
             content: '';
             width: 48px;
             height: 2px;
-            background: #00e676;
+            background: #9ef16e;
         }
 
         h1 {
             font-family: 'Nunito', sans-serif;
             font-weight: 300;
-            font-size: 78px;
-            line-height: 1.08;
+            font-size: 74px;
+            line-height: 1.1;
             letter-spacing: -0.02em;
             margin-bottom: 48px;
         }
 
         .highlight {
             display: inline-block;
-            background: #111;
-            color: #00ff85;
+            background: #9ef16e;
+            color: #0c0c0d;
             padding: 0 30px 8px;
             border-radius: 999px;
             font-weight: 400;
@@ -83,72 +100,26 @@
         .pill {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
             height: 58px;
             padding: 0 28px;
             border-radius: 999px;
             font-size: 20px;
             font-weight: 500;
-            border: 1.5px solid #111;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
         }
 
         .pill.filled {
-            background: #00ff85;
-            border-color: #00ff85;
+            background: #fff;
+            border-color: #fff;
+            color: #0c0c0d;
         }
     </style>
 </head>
 <body>
-    <svg class="slabs" viewBox="0 0 1200 630">
-        <defs>
-            <linearGradient id="cream-face" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#fffdf7"/>
-                <stop offset="1" stop-color="#e6dfcf"/>
-            </linearGradient>
-            <linearGradient id="cream-side" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#d4cbb6"/>
-                <stop offset="1" stop-color="#c2b8a0"/>
-            </linearGradient>
-            <linearGradient id="dark-face" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#2a2a2e"/>
-                <stop offset="1" stop-color="#0b0b0c"/>
-            </linearGradient>
-            <linearGradient id="green-edge" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#00ff85" stop-opacity="0"/>
-                <stop offset=".5" stop-color="#00ff85"/>
-                <stop offset="1" stop-color="#00ff85" stop-opacity="0"/>
-            </linearGradient>
-            <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="-20" dy="30" stdDeviation="24" flood-color="#5b4f33" flood-opacity=".28"/>
-            </filter>
-            <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-                <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#00ff85" flood-opacity=".45"/>
-            </filter>
-        </defs>
-
-        <g transform="rotate(-28 960 315)">
-            <g filter="url(#shadow)">
-                <rect x="760" y="-14" width="640" height="150" rx="75" fill="url(#cream-side)"/>
-                <rect x="760" y="-30" width="640" height="150" rx="75" fill="url(#cream-face)"/>
-            </g>
-            <g filter="url(#shadow)">
-                <rect x="700" y="258" width="560" height="170" rx="85" fill="#050506"/>
-                <g filter="url(#glow)">
-                    <rect x="700" y="240" width="560" height="170" rx="85" fill="url(#dark-face)"/>
-                </g>
-                <rect x="760" y="240" width="440" height="2" fill="url(#green-edge)"/>
-            </g>
-            <g filter="url(#shadow)">
-                <rect x="880" y="526" width="620" height="160" rx="80" fill="url(#cream-side)"/>
-                <rect x="880" y="510" width="620" height="160" rx="80" fill="url(#cream-face)"/>
-            </g>
-        </g>
-
-        <image href="../favicon.svg" x="900" y="250" width="130" height="130"/>
-    </svg>
+    <img class="logo" src="../images/logo.png" alt="">
 
     <div class="content">
-        <div class="label">Goblin Studio · Normandie</div>
+        <div class="label">Agence web · Normandie</div>
         <h1>Des sites qui vous<br><span class="highlight">rapportent</span></h1>
         <div class="pills">
             <span class="pill filled">goblin-studio.com →</span>
