@@ -4,8 +4,8 @@
     --font-heading: 'Nunito', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
-    --color-goblin: #00ff85;
-    --color-goblin-deep: #00a85a;
+    --color-goblin: #9ef16e;
+    --color-goblin-deep: #5fae3a;
     --color-ink: #121214;
     --color-graphite: #1c1c20;
     --color-paper: #f4f4f1;
@@ -112,7 +112,7 @@ html:not(.js) .fade-up {
 }
 
 .pill-goblin:hover {
-    background-color: #5cffb0;
+    background-color: #b9f695;
 }
 
 .pill-outline-light {
@@ -170,7 +170,7 @@ html:not(.js) .fade-up {
 
 .form-field:focus {
     border-color: var(--color-goblin-deep);
-    box-shadow: 0 0 0 4px rgba(0, 255, 133, 0.18);
+    box-shadow: 0 0 0 4px rgba(158, 241, 110, 0.25);
 }
 
 .form-field::placeholder {
