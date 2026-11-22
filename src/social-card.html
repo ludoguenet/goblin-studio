@@ -7,7 +7,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,116 +15,30 @@
             width: 1200px;
             height: 630px;
             overflow: hidden;
-            position: relative;
-            background-color: #0c0c0d;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-            background-size: 14px 14px;
+            background: #0c0c0d;
             font-family: 'Inter', sans-serif;
-            color: #fff;
-        }
-
-        /* Soft green halo behind the logo */
-        body::before {
-            content: '';
-            position: absolute;
-            right: -60px;
-            top: 50%;
-            width: 640px;
-            height: 640px;
-            transform: translateY(-50%);
-            background: radial-gradient(circle, rgba(158, 241, 110, 0.16) 0%, rgba(158, 241, 110, 0.04) 40%, transparent 68%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 56px;
         }
 
         .logo {
-            position: absolute;
-            right: 90px;
-            top: 50%;
-            width: 380px;
-            transform: translateY(-50%);
-            filter: drop-shadow(0 0 28px rgba(158, 241, 110, 0.22));
+            width: 300px;
         }
 
-        .content {
-            position: absolute;
-            left: 80px;
-            top: 0;
-            bottom: 0;
-            width: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .label {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 36px;
-        }
-
-        .label::before {
-            content: '';
-            width: 48px;
-            height: 2px;
-            background: #9ef16e;
-        }
-
-        h1 {
-            font-family: 'Nunito', sans-serif;
-            font-weight: 300;
-            font-size: 74px;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 48px;
-        }
-
-        .highlight {
-            display: inline-block;
-            background: #9ef16e;
-            color: #0c0c0d;
-            padding: 0 30px 8px;
-            border-radius: 999px;
-            font-weight: 400;
-        }
-
-        .pills {
-            display: flex;
-            gap: 16px;
-        }
-
-        .pill {
-            display: inline-flex;
-            align-items: center;
-            height: 58px;
-            padding: 0 28px;
-            border-radius: 999px;
-            font-size: 20px;
+        .tagline {
+            font-size: 16px;
             font-weight: 500;
-            border: 1.5px solid rgba(255, 255, 255, 0.35);
-        }
-
-        .pill.filled {
-            background: #fff;
-            border-color: #fff;
-            color: #0c0c0d;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
     <img class="logo" src="../images/logo.png" alt="">
-
-    <div class="content">
-        <div class="label">Agence web · Normandie</div>
-        <h1>Des sites qui vous<br><span class="highlight">rapportent</span></h1>
-        <div class="pills">
-            <span class="pill filled">goblin-studio.com →</span>
-            <span class="pill">06 42 49 86 53</span>
-        </div>
-    </div>
+    <div class="tagline">Agence web · Normandie</div>
 </body>
 </html>
