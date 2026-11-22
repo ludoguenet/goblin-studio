@@ -8,13 +8,19 @@
     "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
     "serve": "serve -l 3000"
   },
-  "keywords": ["web development", "agency", "laravel", "vue", "nuxt"],
+  "keywords": [
+    "web development",
+    "agency",
+    "laravel",
+    "vue",
+    "nuxt"
+  ],
   "author": "Ludovic Guénet",
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.18",
-    "concurrently": "^9.1.2",
-    "serve": "^14.2.4",
-    "tailwindcss": "^4.1.18"
+    "@tailwindcss/cli": "^4.3.5",
+    "concurrently": "^10.0.7",
+    "serve": "^14.2.8",
+    "tailwindcss": "^4.3.5"
   }
 }
