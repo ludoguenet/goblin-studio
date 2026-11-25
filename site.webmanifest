@@ -1,13 +1,13 @@
 {
-  "name": "Goblin Studio — Agence Web en Normandie",
+  "name": "Goblin Studio — Développement web sur mesure",
   "short_name": "Goblin Studio",
-  "description": "Création de sites internet sur mesure pour artisans, commerçants et entreprises en Normandie.",
+  "description": "Applications web sur mesure, outils métier et API en PHP / Laravel.",
   "icons": [
-    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ],
-  "theme_color": "#121214",
-  "background_color": "#121214",
+  "theme_color": "#f5f5f0",
+  "background_color": "#f5f5f0",
   "display": "standalone",
   "start_url": "/",
   "lang": "fr"

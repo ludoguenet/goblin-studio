@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--
     Social card source (1200x630). Re-render with:
-    chromium --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 \
+    google-chrome --headless=new --hide-scrollbars --window-size=1200,630 --virtual-time-budget=5000 \
         --screenshot=images/social-card.png src/social-card.html
 -->
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,30 +15,151 @@
             width: 1200px;
             height: 630px;
             overflow: hidden;
-            background: #0c0c0d;
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 56px;
+            position: relative;
+            background: #f5f5f0;
+            color: #171815;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        .logo {
-            width: 300px;
+        .text {
+            position: absolute;
+            left: 80px;
+            top: 70px;
         }
 
-        .tagline {
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: 0.3em;
+        .eyebrow {
+            font-family: 'DM Mono', monospace;
+            font-size: 18px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.5);
+            color: #77786f;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #5fae3a;
+        }
+
+        h1 {
+            margin-top: 44px;
+            font-size: 104px;
+            line-height: 0.86;
+            letter-spacing: -0.085em;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        h1 .dot { color: #77786f; }
+
+        h1 .accent {
+            display: inline-block;
+            background: #9ef16e;
+            padding: 0 0.13em 0.05em;
+            transform: rotate(-1deg);
+        }
+
+        .brand {
+            position: absolute;
+            left: 80px;
+            bottom: 64px;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand span { color: #77786f; }
+
+        .stack {
+            position: absolute;
+            left: 340px;
+            bottom: 72px;
+            font-family: 'DM Mono', monospace;
+            font-size: 16px;
+            letter-spacing: 0.15em;
+            color: #77786f;
+        }
+
+        .ring {
+            position: absolute;
+            right: 70px;
+            top: 95px;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid #deded6;
+        }
+
+        .disc {
+            position: absolute;
+            right: 115px;
+            top: 140px;
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            background: #9ef16e;
+        }
+
+        .avatar {
+            position: absolute;
+            right: 105px;
+            top: 40px;
+            width: 350px;
+            transform: rotate(-3deg);
+            -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+            mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+            height: 590px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .chip {
+            position: absolute;
+            font-family: 'DM Mono', monospace;
+            font-size: 15px;
+            padding: 10px 14px;
+            border-radius: 2px;
+        }
+
+        .chip-light {
+            right: 60px;
+            top: 120px;
+            background: #fff;
+            border: 1px solid #deded6;
+            transform: rotate(6deg);
+        }
+
+        .chip-dark {
+            right: 330px;
+            top: 470px;
+            background: #171815;
+            color: #fff;
+            transform: rotate(-6deg);
         }
     </style>
 </head>
 <body>
-    <img class="logo" src="../images/logo.png" alt="">
-    <div class="tagline">Agence web · Normandie</div>
+    <div class="text">
+        <div class="eyebrow">Studio indépendant · Développement web</div>
+        <h1>
+            Du code<span class="dot">.</span><br>
+            Des idées<span class="dot">.</span><br>
+            <span class="accent">Du concret.</span>
+        </h1>
+    </div>
+
+    <div class="brand">GOBLIN<span>STUDIO</span></div>
+    <div class="stack">PHP · LARAVEL · VUE.JS</div>
+
+    <div class="ring"></div>
+    <div class="disc"></div>
+    <img class="avatar" src="../images/avatar.webp" alt="">
+    <div class="chip chip-light">PHP / LARAVEL</div>
+    <div class="chip chip-dark">CREATIVE DEVELOPER</div>
 </body>
 </html>
